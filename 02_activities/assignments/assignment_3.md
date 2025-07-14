@@ -5,25 +5,58 @@
 ### Requirements:
 - We will finish this class by giving you the chance to use what you have learned in a practical context, by creating data visualizations from raw data. 
 - Choose a dataset of interest from the [City of Toronto’s Open Data Portal](https://www.toronto.ca/city-government/data-research-maps/open-data/) or [Ontario’s Open Data Catalogue](https://data.ontario.ca/). 
-- Using Python and one other data visualization software (Excel or free alternative, Tableau Public, any other tool you prefer), create two distinct visualizations from your dataset of choice.  
+
+my data: https://open.toronto.ca/dataset/neighbourhood-crime-rates/
+(included .csv in branch assignment folder)
+
+- Using Python and one other data visualization software (Excel or free alternative, Tableau Public, any other tool you prefer), create two distinct visualizations from your dataset of choice. 
+
+- python: 
+'../../02_activities/assignments/python_crime_visualization_A3.ipynb' 
+'../../02_activities/assignments/scaled_total_shootings_plot.png'
+- tableau:  
+https://public.tableau.com/app/profile/ryan.o.grady/viz/TorontoCrimeRateByNeighbourhood/Sheet1
+'../../02_activities/assignments/Tableau_Visualization.png'
+
+
 - For each visualization, describe and justify: 
     > What software did you use to create your data visualization?
 
+- python (using matplotlib, pandas, os, sklearn) 
+- Tableau public
+
+
     > Who is your intended audience? 
-    
+- python: This is a very simple plot that could be used by police, policymakers, journalists, or anyone who has an interest in investigating a corelation between the total number of shootings in a year vs. the total number of crimes. 
+- tableau: This is a comparison chart that could be used by someone who is worried about crime when choosing a place to live. It is interractive so different neighborhoods can be compared and a simple all encompassing "total crime rate" field has been calculated to conviniently compare.
+
     > What information or message are you trying to convey with your visualization? 
-    
+- python: There is no distinct corelation between the number of crimes in a year and the number of shootings.
+- tableau: Relative to other neighborhoods, which areas in toronto have more or less criminal activity. Are there trends within neighborhoods, for example is a historically dangerous area becoming more safe over time. 
+
     > What aspects of design did you consider when making your visualization? How did you apply them? With what elements of your plots? 
-    
+- python: I made a basic plot with two lines. I added labels, titles, and a legend. It was important to use a scaler to properly visualize drastically different numbers.
+- tableau: It was my first time using tableau, so i went with my instinct and tried to find a way to represent the data in a meaningful way. I ended up with side-by-side bar graphs with a title, labels and tooltips.
+
     > How did you ensure that your data visualizations are reproducible? If the tool you used to make your data visualization is not reproducible, how will this impact your data visualization? 
-    
+- python: I saved the data as csv and used a relative path for the data so it can easily be replaced or even built into a pipeline for updating. 
+- tableau: The data was downloaded and then imported to tableau in a csv format, and the results were published to the public. The onyl change made was a calculated field within tableau.
+
     > How did you ensure that your data visualization is accessible?  
-    
+- python: i used plt.style.use('tableau-colorblind10') although i don't think it did much - at least it's  high contrast. I kept it very simple and easily digestible, no images. I could have included alt text or annotations to go farther. plain typefaces.
+- tableau: i used the color blind color palette. The tooltips are helpful. It's publicly available on tableau's site which likely has alt text. plain typefaces.
+
     > Who are the individuals and communities who might be impacted by your visualization?  
-    
+- python: This plot is an oversimplification of the issue. Some areas/communities in Toronto tell different stories than the overall 'total' data that i considered. If used to influence policy or even in journalism this could be biased. 
+- tableau: real estate agent/home sellers/landlords might be impacted by this transparency if buyers are sensitive to crime. 
+
     > How did you choose which features of your chosen dataset to include or exclude from your visualization? 
-    
+- python: I picked features that would be meaningful when visualized side by side - gun violence vs. total crime.
+- tableau: I worked with the total crime to give a broad overview of the issue.
+
     > What ‘underwater labour’ contributed to your final data visualization product?
+- python: the DSI staff for setting up all my python tools and environments and course material, the toronto police for gathering this data, etc.
+- tableau: The tableau developpers for keeping my visualization online and accessible.
 
 - This assignment is intentionally open-ended - you are free to create static or dynamic data visualizations, maps, or whatever form of data visualization you think best communicates your information to your audience of choice! 
 - Total word count should not exceed **(as a maximum) 1000 words** 
